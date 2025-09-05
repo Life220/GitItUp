@@ -7,4 +7,4 @@ In this deliverable is the wireframe for the splash, home, profile and playlist 
 Website name = RecordShare
 
 GitHub:Life220
-Link: https://github.com/Life220/IMY-220.git
+Link: https://github.com/Life220/GitItUp.git
