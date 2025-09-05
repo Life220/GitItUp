@@ -1,4 +1,4 @@
-docker build -t recordshare . --network=host
+docker build -t gititup . --network=host
 
 PID=$(sudo lsof -t -i:3000)
 if [ -n "$PID" ]; then
@@ -13,5 +13,7 @@ if [ -n "$CONTAINER_ID" ]; then
   docker rm $CONTAINER_ID
 fi
 
-# docker run -p 3000:3000 recordshare
+# docker run -p 3000:3000 gititup
 npm start
+# Development mode: mount source code and use nodemon
+# docker run -p 3000:3000 -v $(pwd):/app gititup

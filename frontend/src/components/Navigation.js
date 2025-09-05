@@ -37,10 +37,10 @@ class Navigation extends React.Component
                 </button>
                 {this.state.showNav && (
                     <div id="Navigation" onMouseLeave={this.closeNavigation}>
-                        <h1>RecordShare</h1>
+                        <h1>GitItUp</h1>
                         <nav>
                             <Link to="/main">Home</Link>
-                            <Link to="/addsong">Add a song</Link>
+                            <Link to="/addsong">New repo</Link>
                             <Link to="/addplaylist">Add a playlist</Link>
                             <Link to="/profile">Profile</Link>
                             <Link to="/">Lougout</Link>

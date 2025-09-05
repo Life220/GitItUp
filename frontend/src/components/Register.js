@@ -32,29 +32,29 @@ class Register extends React.Component
       alert("Please fill in all required fields.");
       return;
     }
-    
-    const response = await getProfile(username);
-    
-    if (response.data == "User not found")
-    {
-      console.log(response.error);
-      const registered = await register(username, password, image, bio, email);
-      if (registered)
-      {
+
+    // const response = await getProfile(username);
+
+    // if (response.data == "User not found")
+    // {
+    //   console.log(response.error);
+    //   const registered = await register(username, password, image, bio, email);
+    //   if (registered)
+    //   {
         alert("Registered succesfully, welcome " + username);
         localStorage.setItem("username", username);
         this.setState({ autherized: true });
-      }
-      else
-      {
-        alert("An error occured when registering")
-      }
-    }
-    else
-    {
-      console.log(response);
-      alert("Username already in use");
-    }
+    //   }
+    //   else
+    //   {
+    //     alert("An error occured when registering")
+    //   }
+    // }
+    // else
+    // {
+      // console.log(response);
+      // alert("Username already in use");
+    // }
   };
 
   render()

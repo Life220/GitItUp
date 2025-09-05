@@ -30,20 +30,21 @@ class Login extends React.Component
   handleLogin = async (event) => {
     event.preventDefault();
     const { username, password } = this.state;
-    const success = await login(username, password);
-    
-    if (success.message == "Login successful")
+    // const success = await login(username, password);
+
+
+    // if (success.message == "Login successful")
     {
       localStorage.setItem("username", username);
       localStorage.setItem("_id", success.userId);
       this.setState({ autherized: true });
     }
-    else
-    {
-      console.log(success);
+    // else
+    // {
+    //   console.log(success);
 
-      alert(success);
-    }
+    //   alert(success);
+    // }
   };
 
   handleRegister = () => {
@@ -55,10 +56,10 @@ class Login extends React.Component
     const { username, password, register, autherized } = this.state;
 
     return (
-      <div>        
+      <div>
         <div className="flex justify-center">
           <div className="flex flex-col items-center mt-2 p-10 greetBack w-80">
-            <h1>RecordShare</h1>
+            <h1>GitItUp</h1>
             <div className="flex flex-col w-52 m-2 gap-1">
               {autherized ?
                 (<Navigate to="/main" />)
